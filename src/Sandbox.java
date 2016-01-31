@@ -1,7 +1,4 @@
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
-import java.util.Stack;
+import java.util.*;
 
 /**
  * Created by heroix on 2016-01-27.
@@ -31,4 +28,9 @@ public class Sandbox {
         }
     }
 
+    public static void main(String[] args) {
+        System.out.println("Hello World!"); // Display the string.
+    }
 }
+
+

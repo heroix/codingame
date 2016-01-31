@@ -1,4 +1,4 @@
-package puzzle;
+package puzzle.medium;
 
 import java.util.HashSet;
 import java.util.Scanner;
@@ -6,6 +6,7 @@ import java.util.Set;
 
 /**
  * Created by heroix on 2016-01-28.
+ * 2/3
  */
 public class SkynetTheVirus {
     Set<Link> links = new HashSet<Link>();
