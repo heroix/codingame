@@ -9,19 +9,69 @@ import java.util.Set;
 public class UniquePairs {
 
     public static void main(String[] args) {
-        int k = 2; // members in pair
-        Set<String> n = new HashSet<>();
-        n.add("A");
-        n.add("B");
-        n.add("C");
-        n.add("D");
+        System.err.println(count(0));
+        System.err.println(count2(0));
+        System.err.println(count3(0));
 
-        int nFactorial = factorial(n.size());
+        System.err.println(count(1));
+        System.err.println(count2(1));
+        System.err.println(count3(1));
+
+        System.err.println(count(2));
+        System.err.println(count2(2));
+        System.err.println(count3(2));
+
+        System.err.println(count(3));
+        System.err.println(count2(3));
+        System.err.println(count3(3));
+
+        System.err.println(count(4));
+        System.err.println(count2(4));
+        System.err.println(count3(4));
+
+        System.err.println(count(5));
+        System.err.println(count2(5));
+        System.err.println(count3(5));
+
+        System.err.println(count(6));
+        System.err.println(count2(6));
+        System.err.println(count3(6));
+    }
+
+    static int count(int n) {
+        int k = 2; // members in pair
+        int nFactorial = factorial(n);
         int kFactorial = factorial(k);
-        int nMinusKFactorial = factorial(n.size() - k);
+        int nMinusKFactorial = factorial(n - k);
         int uniquePairs = nFactorial / (kFactorial * nMinusKFactorial);
 
-        System.err.println(uniquePairs);
+        return uniquePairs;
+    }
+
+    static int count2(int n) {
+        int pairs = 0;
+        for (int i = 0; i < n; i++) {
+            for (int j = i; j < n; j++) {
+                if (i != j) {
+                    pairs++;
+                }
+            }
+        }
+
+        return pairs;
+    }
+
+    static int count3(int n) {
+        int pairs = 0;
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
+                if (i != j) {
+                    pairs++;
+                }
+            }
+        }
+
+        return pairs;
     }
 
     static int factorial(int n) {
